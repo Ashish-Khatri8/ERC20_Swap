@@ -21,12 +21,24 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.4",
   networks: {
+    hardhat: {
+      forking: {
+        url: process.env.ROPSTEN_HTTP_INFURA,
+      }
+    },
     rinkeby: {
       url: process.env.RINKEBY_HTTP_INFURA || '',
       accounts: {
         mnemonic: process.env.MNEMONICS,
       },
       chainId: 4,
+    },
+    ropsten: {
+      url: process.env.ROPSTEN_HTTP_INFURA || '',
+      accounts: {
+        mnemonic: process.env.MNEMONICS,
+      },
+      chainId: 3,
     },
   },
   etherscan: {
