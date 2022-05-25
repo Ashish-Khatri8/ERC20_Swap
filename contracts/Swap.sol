@@ -91,7 +91,7 @@ contract Swap {
         // Alows users to claim their stored ether in contract.
         require(
             weiStored[msg.sender] >= _weiAmount,
-            "Swap: No wei stored in contract for you!"
+            "Swap: Insufficient balance!"
         );
 
         weiStored[msg.sender] -= _weiAmount;
