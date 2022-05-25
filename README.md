@@ -19,7 +19,7 @@ This contract deploys an ERC20 token with the following details.
 - There is no initial supply, but the contract owner can call the mint() function to mint tokens to an address.
 It takes the address and the amount of tokens to mint as arguments (must be passed without token decimals).
 
->
+---
 
 ## Contract: Swap.sol
 
@@ -31,18 +31,18 @@ It takes the address and the amount of tokens to mint as arguments (must be pass
 
 - This contract uses the Uniswap V2 router to create a new ERC20<->Weth pair and add the initial liquidity to it.
 
->
+---
 
 - Users can interact with the swapBLZ() function to swap their ERC20 tokens with eth, which gets stored in this contract itself.
 - It takes the amount of ERC20 tokens to swap as argument.
 - This contract must be given an allowance of provided amount of tokens as well in order to swap them.
 
->
+---
 
 - Users can interact with the withdrawETH() function to withdraw the amount of eth stored for them in this contract.
 - This function takes the amount of wei to withdraw as argument.
 
->
+---
 
 ### Basic Sample Hardhat Project
 
