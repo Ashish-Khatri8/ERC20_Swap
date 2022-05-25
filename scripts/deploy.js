@@ -16,7 +16,7 @@ async function main() {
     const Swap = await ethers.getContractFactory("Swap");
     const swap = await Swap.deploy(blazeToken.address);
     await swap.deployed();
-    console.log("Swap token deployed at: ", swap.address);
+    console.log("Swap contract deployed at: ", swap.address);
     
 
     // Mint BlazeTokens to owner, add1, addr2.
